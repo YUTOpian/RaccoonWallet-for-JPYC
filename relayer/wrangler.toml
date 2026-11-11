@@ -1,0 +1,12 @@
+name = "jpyc-relayer"
+main = "worker.mjs"
+compatibility_date = "2025-01-01"
+
+[vars]
+# 受け付けるチェーンとJPYCコントラクト(RPCは自前のものに差し替えること)
+CHAINS_JSON = '{"137":{"rpc":"https://polygon-rpc.com","token":"0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29"}}'
+# ウォレットアプリを配信しているOrigin(カンマ区切り)
+ALLOWED_ORIGINS = "https://wallet.example.com"
+MAX_PER_ADDRESS_PER_DAY = "20"
+
+# RELAYER_PRIVATE_KEY は vars に書かず `wrangler secret put RELAYER_PRIVATE_KEY` で登録する
